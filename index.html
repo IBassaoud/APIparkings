@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Parking</title>
+    <style>
+        * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box; 
+        }
+        header {
+            margin-top:20px;
+            margin-bottom: 20px;
+        }
+
+        body {
+            background-color: lightslategray;
+            height: 100vh;
+            width: 100vw;
+            
+        }
+
+        h2 {
+            color:red;
+            font-family: "Cascadia code";
+            text-align: center;
+        }
+
+        h4 {
+            color:white;
+            text-align: center;
+        }
+
+        legend {
+            text-align: center;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .mycontainer {
+            width:80%;
+            display: flex;
+            flex-flow: row wrap;
+            gap: 0px;
+            margin-left: 10%;
+            gap: 30px;
+        }
+        .myfields {
+            width: calc(100% / 2 - 20px);            
+
+        }
+        
+        .myfields form {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .myfields form div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin: 5px 0;
+        }
+
+        .field_1_labels {
+            width: 20%;
+            text-align: right;
+        }
+
+        .field_1_inputs {
+            width: 50%;
+        }
+
+        .btn_submit_create {
+            width: 100px;
+            height: fit-content;
+        }
+
+        .field_2_labels {
+            width: 20%;
+            text-align: right;
+        }
+
+        .field_2_inputs {
+            width: 50%;
+        }
+
+        .field_3_labels {
+            width: 20%;
+            text-align: right;
+        }
+
+        .field_3_inputs {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h2>Hello world</h2>
+    <h4>This is you wonderfull website especially made for your parking reservation, awesome right?</h4>
+    </header>
+    <div class="mycontainer">
+    <fieldset class="field_1 myfields">
+        <legend>Add Client</legend>
+        <form method="post" id="parkingsForm">
+            <div>
+                <label for="name_create" class="field_1_labels">Name :</label>
+                <input type="text" id="name_create" name="name_create" placeholder="Type name of the Parking" class="field_1_inputs">
+            </div>
+            <div>
+                <label for="airport-category" class="field_1_labels">Choose a port : </label>
+                <select name="airports" id="airport-category" class="field_1_inputs">
+                    <option value="">---Please select an option---</option>
+                    <option value="airport">AIRPORT</option>
+                    <option value="landport">LANDPORT</option>
+                    <option value="onshoreport">ONSHORE PORT</option>
+                    <option value="islandport">ISLANDPORT</option>
+                    <option value="privateport">PRIVATE PORT</option>
+            </select>
+            </div>
+            <div>
+                <label for="city" class="field_1_labels">City :</label>
+                <input id="input_city" name="city" type="text" placeholder="Type the city" class="field_1_inputs">
+            </div>
+            <input type="submit" value="Send" class="btn_submit_create">
+        </form>
+    </fieldset>
+    <fieldset class="field_2 myfields">
+        <legend>Details Parkings</legend>
+        <form method="post" id="parkingsEdit">
+            <div>
+                <label for="id_modify" class="field_2_labels">ID :</label>
+                <input type="text" id="id_modify" name="id_modify" placeholder="ID Parking" class="field_2_inputs">
+            </div>
+            <div>
+                <label for="name_modify" class="field_2_labels">Name :</label>
+                <input type="text" id="name_modify" name="name_modify" placeholder="Edit the name" class="field_2_inputs">
+            </div>
+            <div>
+                <label for="type_modify" class="field_2_labels">Type :</label>
+                <input type="text" id="type_modify" name="type_modify" placeholder="Edit the type" class="field_2_inputs">
+            </div>
+            <div>
+                <label for="city_modify" class="field_2_labels">City :</label>
+                <input type="text" id="city_modify" name="city_modify" placeholder="Edit the city" class="field_2_inputs">
+            </div>
+        </form>
+    </fieldset>
+    <fieldset class="field_3 myfields">
+        <legend>Delete Parkings</legend>
+        <form method="delete" id="parkingsDelete">
+            <div>
+                <label for="id_delete" class="field_3_labels">ID :</label>
+                <input type="text" id="id_delete" name="id_delete" placeholder="ID Parking" class="field_2_inputs">
+            </div>
+            <div>
+                <label for="name_delete" class="field_3_labels">Name :</label>
+                <input type="text" id="name_delete" name="name_delete" placeholder="Edit the name" class="field_2_inputs">
+            </div>
+            <div>
+                <label for="type_delete" class="field_3_labels">Type :</label>
+                <input type="text" id="type_delete" name="type_delete" placeholder="Edit the type" class="field_2_inputs">
+            </div>
+            <div>
+                <label for="city_delete" class="field_3_labels">City :</label>
+                <input type="text" id="city_delete" name="city_delete" placeholder="Edit the city" class="field_2_inputs">
+            </div>
+        </form>
+    </fieldset>
+</div>
+</body>
+</html>
